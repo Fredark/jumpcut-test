@@ -9,6 +9,7 @@ class App extends Component {
         <header className="App-header">
 
           <h1>Jumpcut Test</h1>
+          <span>Test</span>
         </header>
       </div>
     );
