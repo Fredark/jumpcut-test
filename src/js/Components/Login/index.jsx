@@ -19,7 +19,7 @@ class Login extends Component {
     return (
       <div className="login">
         <span className="login__icon">
-          {user.photo != "" ? (
+          {user.photo !== "" ? (
             <img src={user.photo} alt={user.name} />
           ) : (
             <Icons id="user" />
