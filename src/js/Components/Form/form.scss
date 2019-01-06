@@ -16,6 +16,16 @@
       visibility: visible;
       z-index: 20;
     }
+
+    .icon {
+      fill: $color02;
+    }
+  }
+
+  &:hover {
+    .input-box__input {
+      border-color: $color02;
+    }
   }
 
   .icon {
