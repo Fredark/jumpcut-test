@@ -17,7 +17,7 @@ class Search extends Component {
 
     return (
       <section className="search">
-        <video id="background-video" loop autoPlay>
+        <video className="search__video" loop autoPlay muted playsinline>
           <source src={video} type="video/mp4" />
         </video>
         <div className="container search__container">
