@@ -46,18 +46,18 @@
     color: #21313e;
     font-size: rem(14px);
     font-weight: 400;
-    flex: 0 1 rem(250px);
+    flex: 0 1 rem(270px);
     letter-spacing: rem(.5px);
     line-height: rem(21px);
     height: rem(55px);
     outline: none;
     padding: rem(15px) rem(16px) rem(15px) rem(45px);
     transition: all 150ms ease-in-out;
-    width: rem(250px);
+    width: rem(270px);
 
     &--area {
-      flex: 0 1 rem(150px);
-      width: rem(150px);
+      flex: 0 1 rem(195px);
+      width: rem(195px);
     }
 
     &:focus {
@@ -69,6 +69,7 @@
 .options-list {
   background-color: white;
   border-radius: 0 0 rem(3px) rem(3px);
+  box-shadow: 0 0 rem(5px) 0 rgba(0, 0, 0, .2);
   position: absolute;
   margin-top: rem(-10px);
   top: 100%;

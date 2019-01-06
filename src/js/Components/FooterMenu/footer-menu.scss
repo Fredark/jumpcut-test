@@ -1,0 +1,41 @@
+@import "~sass-rem";
+@import "../../../style/utils/_variables.scss";
+
+.footer-menu {
+  flex: 0 0 auto;
+
+  &__list {
+    align-items: center;
+    display: flex;
+    margin-bottom: rem(3px);
+  }
+
+  &__item {
+    flex: 0 0 auto;
+
+    &:first-child:before {
+      display: none;
+    }
+
+    &:before {
+      content: '|';
+      color: #aaa;
+      font-size: rem(12px);
+      font-weight: 400;
+    }
+  }
+
+  &__link {
+    color: #aaa;
+    display: inline-block;
+    font-size: rem(12px);
+    font-weight: 400;
+    letter-spacing: rem(.5);
+    padding: rem(0) rem(10px);
+    transition: all 150ms ease-in-out;
+
+    &:hover {
+      color: $color02;
+    }
+  }
+}

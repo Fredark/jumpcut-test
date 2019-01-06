@@ -1,0 +1,15 @@
+{
+  "short_name": "Jumpcut Test",
+  "name": "Jumpcut Front-end Test - Part One",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#181818",
+  "background_color": "#ffffff"
+}
