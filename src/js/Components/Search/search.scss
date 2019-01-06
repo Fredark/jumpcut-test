@@ -19,6 +19,8 @@
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
 
     &:before {
       background-color: rgba(0, 0, 0, .3);
@@ -75,6 +77,11 @@
     height: rem(55px);
     outline: none;
     text-transform: uppercase;
+    transition: all 150ms ease-in-out;
     width: rem(130px);
+
+    &:hover {
+      background-color: $color02hover;
+    }
   }
 }
