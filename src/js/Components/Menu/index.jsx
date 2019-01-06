@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { dataMenu } from '../../Data/menu';
+import './menu.scss';
 
 class Menu extends Component {
 

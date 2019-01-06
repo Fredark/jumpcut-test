@@ -1,5 +1,59 @@
+@import "~sass-rem";
 @import "../../../style/utils/_variables.scss";
 
 .header {
   background-color: $color01;
+
+  &__container {
+    align-items: center;
+    display: flex;
+    height: rem(70px);
+  }
+
+  &__logo {
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+    height: rem(30px);
+    margin-right: rem(45px);
+    overflow: hidden;
+  }
+}
+
+.user-list {
+  align-items: center;
+  display: flex;
+
+  &__item {
+    cursor: pointer;
+    margin-right: rem(25px);
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+
+.login {
+  align-items: center;
+  display: flex;
+
+  &__icon {
+    align-items: center;
+    background-color: $color03;
+    border-radius: rem(18px);
+    display: flex;
+    height: rem(36px);
+    justify-content: center;
+    margin-right: rem(12px);
+    width: rem(36px);
+  }
+
+  &__name {
+    color: white;
+    font-size: rem(16);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: rem(1px);
+  }
 }

@@ -1,0 +1,42 @@
+@import "~sass-rem";
+@import "../../../style/utils/_variables.scss";
+
+.menu {
+  flex: 1 1 auto;
+  
+  &__list {
+    align-items: center;
+    display: flex;
+  }
+
+  &__item {
+    margin-right: rem(30px);
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &--active {
+      .menu__link {
+        color: $color02;
+      }
+    }
+  }
+
+  &__link {
+    border-bottom: rem(2px) solid transparent;
+    color: white;
+    display: block;
+    font-size: rem(14px);
+    font-weight: 500;
+    letter-spacing: rem(.5px);
+    padding: rem(5px) 0 rem(3px);
+    text-transform: uppercase;
+    transition: all 150ms ease-in-out;
+
+    &:hover {
+      border-bottom-color: $color02;
+      color: $color02;
+    }
+  }
+}

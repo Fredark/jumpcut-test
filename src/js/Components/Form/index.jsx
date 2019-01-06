@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Input from '../Input';
+import './form.scss';
 
 class Form extends Component  {
 
@@ -10,6 +11,8 @@ class Form extends Component  {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleOptionClick = this.handleOptionClick.bind(this);
+    this.handleBlur = this.handleBlur.bind(this);
+    this.handleFocus = this.handleFocus.bind(this);
   }
 
   findItem(id) {
@@ -33,7 +36,6 @@ class Form extends Component  {
   changeValue(id, value) {
 
     let item = this.findItem(id);
-
     item.data.value = value;
 
     let newState = Object.assign({}, {
@@ -46,8 +48,6 @@ class Form extends Component  {
   }
 
   changeItem(id, value) {
-    this.changeValue(id, "");
-
     let item = this.findItem(id);
     item.data.values = value.slice();
   }
@@ -55,9 +55,28 @@ class Form extends Component  {
   handleChange(event) {
 
     let id    = event.target.id,
-        value = event.target.value;
+        value = event.target.value,
+        aux,
+        item,
+        newValues;
 
     this.setState(this.changeValue(id, value));
+
+    item = this.findItem(id);
+    aux = value.toLowerCase();
+
+    newValues = item.data.values.filter((val) => {
+      return val.value.toLowerCase().search(aux) > -1;
+    });
+
+    [...event.currentTarget.parentElement.querySelectorAll('.options-list__item')].forEach((item) => {
+      item.classList.add('options-list__item--off');
+    });
+
+    newValues.forEach((val) => {
+      document.getElementById(val.key).classList.remove('options-list__item--off');
+    });
+
   }
 
   handleOptionClick(event) {
@@ -71,8 +90,17 @@ class Form extends Component  {
     item = this.findChild(parent, targetId);
 
     if(item.child !== null) {
+      this.changeValue(item.child.target, "");
       this.changeItem(item.child.target, item.child.values);
     }
+  }
+
+  handleBlur(event) {
+    event.currentTarget.parentElement.classList.remove('input-box--on');
+  }
+
+  handleFocus(event) {
+    event.currentTarget.parentElement.classList.add('input-box--on');
   }
 
   render() {
@@ -83,7 +111,7 @@ class Form extends Component  {
       <form className="search__form">
 
         {inputs.map((item) =>
-          <Input env={env} data={item.data} key={item.key} id={item.key} handleChange={this.handleChange} handleOptionClick={this.handleOptionClick} />
+          <Input env={env} data={item.data} name={item.name} key={item.key} id={item.key} handleChange={this.handleChange} handleOptionClick={this.handleOptionClick} handleBlur={this.handleBlur} handleFocus={this.handleFocus} />
         )}
 
         <button className="search__button" type="button">Search</button>
@@ -91,6 +119,5 @@ class Form extends Component  {
     );
   }
 }
-
 
 export default Form;
