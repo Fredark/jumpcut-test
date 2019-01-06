@@ -4,7 +4,9 @@ import Icons from '../Icons';
 
 const Input = ({env, data, name, id, handleChange, handleOptionClick, handleBlur, handleFocus}) => (
   <div className={env + "__input-box input-box"}>
-    <Icons className={env + "__input-icon input-box__icon"} id={data.icon} />
+    <label for={id}>
+      <Icons className={env + "__input-icon input-box__icon"} id={data.icon} />
+    </label>
 
     <input
       className={env + "__input input-box__input input-box__input--" + name}
