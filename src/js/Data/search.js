@@ -20,22 +20,22 @@ export const dataSearch = {
           values: [
             {
               key: uuidv1(),
-              value: "Palau Ujong, Singapure",
+              value: "Palau Ujong, Singapore",
               child: null
             },
             {
               key: uuidv1(),
-              value: "Jurong, Singapure",
+              value: "Jurong, Singapore",
               child: null
             },
             {
               key: uuidv1(),
-              value: "Woodlands, Singapure",
+              value: "Woodlands, Singapore",
               child: null
             },
             {
               key: uuidv1(),
-              value: "Tampines, Singapure",
+              value: "Tampines, Singapore",
               child: null
             },
             {

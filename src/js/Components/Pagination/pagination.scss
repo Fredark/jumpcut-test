@@ -1,0 +1,41 @@
+@import "~sass-rem";
+@import "../../../style/utils/_variables.scss";
+
+.pagination {
+  align-items: center;
+  display: flex;
+  width: auto;
+
+  &__item {
+    align-items: center;
+    border-radius: rem(3px);
+    cursor: pointer;
+    display: inline-flex;
+    height: rem(30px);
+    justify-content: center;
+    margin: 0 rem(3px);
+    transition: all 150ms ease-in-out;
+    width: rem(30px);
+
+    &--on,
+    &:hover {
+      background-color: $color02;
+
+      .pagination__number {
+        color: white;
+      }
+
+      .icon {
+        fill: white;
+      }
+    }
+  }
+
+  &__number {
+    color: #768084;
+    font-size: rem(16px);
+    font-weight: 500;
+    letter-spacing: rem(.5px);
+    transition: all 150ms ease-in-out;
+  }
+}
