@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import banner from '../../../assets/banner.mp4';
 import Form from '../Form';
 import { dataSearch } from '../../Data/search'
+import './search.scss';
 
 
 class Search extends Component {
@@ -26,6 +27,10 @@ class Search extends Component {
           </video>
         </div>
         <div className="container search__container">
+          <h1 className="search__title">Sed augue ipsum egestas</h1>
+          <p className="search__subtitle">
+            Curabitur nisi. Vivamus consectetuer hendrerit.
+          </p>
           <Form data={search} />
         </div>
       </section>

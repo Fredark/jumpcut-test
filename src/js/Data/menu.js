@@ -7,13 +7,13 @@ export const dataMenu = {
     {
       key: uuidv1(),
       link: "#",
-      title: "Community",
+      title: "My Courses",
       active: false
     },
     {
       key: uuidv1(),
       link: "#",
-      title: "My Courses",
+      title: "Community",
       active: false
     },
     {

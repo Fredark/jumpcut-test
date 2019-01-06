@@ -13,7 +13,7 @@ class Header extends Component {
     return (
       <header className="header">
         <div className="container header__container">
-          <a className="logo" href="/">
+          <a className="header__logo" href="/">
             <Icons id="logo" />
           </a>
           <Menu />

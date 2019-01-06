@@ -2,17 +2,21 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Icons from '../Icons';
 
-const Input = ({env, data, id, handleChange, handleOptionClick}) => (
+const Input = ({env, data, name, id, handleChange, handleOptionClick, handleBlur, handleFocus}) => (
   <div className={env + "__input-box input-box"}>
     <Icons className={env + "__input-icon input-box__icon"} id={data.icon} />
 
     <input
-      className={env + "__input input-box__input"}
+      className={env + "__input input-box__input input-box__input--" + name}
+      name={name}
       type={data.type}
       value={data.value}
       id={id}
       onChange={handleChange}
+      onBlur={handleBlur}
+      onFocus={handleFocus}
       required={data.required}
+      autoComplete="off"
     />
 
     <ul className={env + "__options-list options-list"}>
@@ -32,8 +36,11 @@ Input.propTypes = {
   env: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
   data: PropTypes.object.isRequired,
+  name: PropTypes.string.isRequired,
   handleChange: PropTypes.func.isRequired,
-  handleOptionClick: PropTypes.func.isRequired
+  handleOptionClick: PropTypes.func.isRequired,
+  handleBlur: PropTypes.func.isRequired,
+  handleFocus: PropTypes.func.isRequired
 };
 
 export default Input;
