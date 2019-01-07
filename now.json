@@ -1,1 +1,16 @@
-{}
+{
+    "version": 2,
+    "name": "create-react-app",
+    "builds": [
+        { "src": "package.json", "use": "@now/static-build" }
+    ],
+    "routes": [
+        {"src": "^/static/(.*)", "dest": "part-one/static/$1"},
+        {"src": "^/favicon.ico", "dest": "part-one/favicon.ico"},
+        {"src": "^/asset-manifest.json", "dest": "part-one/asset-manifest.json"},
+        {"src": "^/manifest.json", "dest": "part-one/manifest.json"},
+        {"src": "^/service-worker.js", "headers": {"cache-control": "s-maxage=0"}, "dest": "part-one/service-worker.js"},
+        {"src": "^/precache-manifest.(.*)", "dest": "part-one/precache-manifest.$1"},
+        {"src": "^/(.*)", "dest": "part-one/index.html"}
+    ]
+}
