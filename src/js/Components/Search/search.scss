@@ -1,0 +1,89 @@
+@import "~sass-rem";
+@import "../../../style/utils/_variables.scss";
+
+.search {
+  position: relative;
+
+  &__container {
+    align-items: center;
+    display: flex;
+    flex-flow: column nowrap;
+    height: calc(100vh - 230px);
+    min-height: rem(350px);
+    justify-content: center;
+    position: relative;
+    z-index: 50;
+  }
+
+  &__video-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    &:before {
+      background-color: rgba(0, 0, 0, .3);
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      z-index: 30;
+    }
+  }
+
+  &__video {
+    position: relative;
+    width: 100%;
+    z-index: 20;
+  }
+
+  &__title {
+    color: white;
+    display: block;
+    flex: 0 0 auto;
+    font-size: rem(42px);
+    font-weight: 700;
+    letter-spacing: rem(1px);
+    margin-bottom: rem(20px);
+    text-shadow: 0 rem(2px) rem(10px) rgba(0, 0, 0, .3);
+    text-align: center;
+  }
+
+  &__subtitle {
+    color: white;
+    display: block;
+    font-size: rem(21px);
+    font-weight: 500;
+    flex: 0 0 auto;
+    letter-spacing: rem(.5px);
+    margin-bottom: rem(40px);
+    text-shadow: 0 rem(2px) rem(10px) rgba(0, 0, 0, .3);
+    text-align: center;
+  }
+
+  &__form {
+    align-items: center;
+    display: flex;
+  }
+
+  &__button {
+    background-color: $color04;
+    border: 0 none;
+    border-radius: rem(3px);
+    color: black;
+    cursor: pointer;
+    font-size: rem(14px);
+    font-weight: 700;
+    height: rem(55px);
+    outline: none;
+    text-transform: uppercase;
+    transition: all 150ms ease-in-out;
+    width: rem(130px);
+
+    &:hover {
+      background-color: $color02hover;
+    }
+  }
+}
