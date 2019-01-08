@@ -24,4 +24,4 @@ Script to run:
 Script to build:
 ### `npm run build`
 
-All approved PR sended to the master branch will automatically be deployed and servered with a new link by new.sh
+All approved PR sended to the branches `production/part-one` and `production/part-two` branch will automatically be deployed and servered with a new link by new.sh
