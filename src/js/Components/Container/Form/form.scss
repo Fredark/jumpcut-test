@@ -88,15 +88,20 @@
   }
 
   &__clear {
+    align-items: center;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
     position: absolute;
-    right: rem(20px);
+    right: rem(5px);
     top: 50%;
+    height: rem(30px);
     transform: translateY(-50%);
     line-height: 0;
     transition: all 150ms ease-in-out;
     opacity: 0;
     visibility: hidden;
+    width: rem(30px);
 
     .icon {
       fill: $color01;
