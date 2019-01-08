@@ -11,7 +11,7 @@
     margin-bottom: rem(20px);
     text-align: center;
 
-    @media(min-width: $media-lg) {
+    @media(min-width: $media-xl) {
       text-align: left;
     }
   }
@@ -24,7 +24,7 @@
     display: flex;
     justify-content: center;
 
-    @media(min-width: $media-lg) {
+    @media(min-width: $media-xl) {
       justify-content: flex-end;
     }
   }
@@ -102,11 +102,11 @@
       border: rem(2px) solid white;
       border-radius: 50%;
       content: '';
-      height: rem(15px);
+      height: rem(12px);
       position: absolute;
       bottom: rem(7px);
       right: rem(2px);
-      width: rem(15px);
+      width: rem(12px);
       z-index: 20;
     }
   }

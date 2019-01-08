@@ -14,9 +14,14 @@
     position: relative;
     z-index: 50;
 
-    @media(orientation: landscape) {
+    @media(orientation: landscape) and (min-width: $media-xs) {
       height: calc(100vh - 55px);
       min-height: rem(250px);
+    }
+
+    @media(min-width: $media-xs) {
+      min-height: rem(350px);
+      height: calc(100vh - 330px);
     }
 
     @media(min-width: $media-lg) {
@@ -26,7 +31,10 @@
   }
 
   &__video-mask {
+    align-items: flex-start;
+    display: flex;
     position: absolute;
+    justify-content: center;
     top: 0;
     left: 0;
     width: 100%;
@@ -48,12 +56,18 @@
     position: relative;
     z-index: 20;
 
-    @media(orientation: landscape) {
+    @media(min-width: $media-xs) {
+      height: 130%;
+      width: auto;
+    }
+
+    @media(orientation: landscape) and (min-width: $media-xs) {
       height: auto;
       width: 100%;
     }
 
     @media(min-width: $media-lg) {
+      height: auto;
       width: 100%;
     }
   }
@@ -68,6 +82,11 @@
     margin-bottom: rem(10px);
     text-shadow: 0 rem(2px) rem(10px) rgba(0, 0, 0, .3);
     text-align: center;
+
+    @media(min-width: $media-md) {
+      font-size: rem(32px);
+      margin-bottom: rem(15px);
+    }
 
     @media(min-width: $media-lg) {
       font-size: rem(42px);
@@ -86,6 +105,11 @@
     margin-bottom: rem(10px);
     text-shadow: 0 rem(2px) rem(10px) rgba(0, 0, 0, .3);
     text-align: center;
+
+    @media(min-width: $media-md) {
+      font-size: rem(18px);
+      margin-bottom: rem(20px);
+    }
 
     @media(min-width: $media-lg) {
       font-size: rem(21px);
@@ -109,15 +133,20 @@
     cursor: pointer;
     font-size: rem(14px);
     font-weight: 700;
-    height: rem(55px);
+    height: rem(49px);
     outline: none;
     text-transform: uppercase;
-    margin: rem(5px) 0 0;
-
+    margin: rem(5px);
     transition: all 150ms ease-in-out;
     width: rem(130px);
 
-    @media(min-width: $media-lg) {
+    @media(orientation: landscape) and (min-width: $media-xs) {
+      height: rem(43px);
+      margin: rem(5px);
+    }
+
+    @media(min-width: $media-xl) {
+      height: rem(55px);
       margin: 0 0 0 rem(3px);
     }
 

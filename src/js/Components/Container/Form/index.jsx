@@ -121,7 +121,6 @@ class Form extends Component  {
         value     = event.currentTarget.dataset.value,
         targetId  = event.currentTarget.id,
         $inputBox = event.currentTarget.parentElement.parentElement,
-        $input    = document.getElementById(parent),
         item;
 
     this.changeValue(parent, value);

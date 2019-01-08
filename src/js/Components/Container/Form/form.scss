@@ -3,16 +3,20 @@
 
 .input-box {
   position: relative;
-  margin: rem(5px) 0;
-  flex: 1 1 rem(250px);
+  margin: rem(5px);
+  flex: 1 1 rem(350px);
   width: 100%;
 
-  @media(orientation: landscape) {
+  @media(orientation: landscape) and (min-width: $media-xs) {
     margin: rem(5px);
+    flex: 1 1 rem(300px);
   }
 
-  @media(min-width: $media-lg) {
+
+
+  @media(min-width: $media-xl) {
     margin: rem(5px) rem(3px);
+    flex: 0 0 auto;
     width: auto;
   }
 
@@ -73,19 +77,19 @@
     transition: all 150ms ease-in-out;
     width: 100%;
 
-    @media(orientation: landscape) {
+    @media(orientation: landscape) and (min-width: $media-xs) {
       height: rem(43px);
       padding: rem(9px) rem(45px) rem(9px) rem(45px);
     }
 
-    @media(min-width: $media-lg) {
+    @media(min-width: $media-xl) {
       height: rem(55px);
       padding: rem(15px) rem(45px) rem(15px) rem(45px);
       width: rem(240px);
     }
 
     &--area {
-      @media(min-width: $media-lg) {
+      @media(min-width: $media-xl) {
         width: rem(195px);
       }
     }

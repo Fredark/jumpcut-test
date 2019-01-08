@@ -11,7 +11,7 @@
     justify-content: space-between;
     transition: all 150ms ease-in-out;
 
-    @media(min-width: $media-lg) {
+    @media(min-width: $media-xl) {
       height: rem(70px);
       justify-content: flex-start;
     }

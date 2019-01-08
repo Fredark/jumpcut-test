@@ -11,7 +11,7 @@
   text-align: center;
   margin-bottom: rem(10px);
 
-  @media(min-width: $media-lg) {
+  @media(min-width: $media-md) {
     text-align: left;
     margin-bottom: 0;
   }
