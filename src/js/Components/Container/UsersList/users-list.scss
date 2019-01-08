@@ -9,6 +9,11 @@
     font-weight: 500;
     letter-spacing: rem(.2px);
     margin-bottom: rem(20px);
+    text-align: center;
+
+    @media(min-width: $media-lg) {
+      text-align: left;
+    }
   }
 
   &__number {
@@ -17,7 +22,11 @@
 
   &__bottom {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+
+    @media(min-width: $media-lg) {
+      justify-content: flex-end;
+    }
   }
 }
 

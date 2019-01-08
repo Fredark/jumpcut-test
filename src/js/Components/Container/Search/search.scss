@@ -9,6 +9,7 @@
     display: flex;
     flex-flow: column nowrap;
     height: 75vh;
+    min-height: rem(420px);
     justify-content: center;
     position: relative;
     z-index: 50;

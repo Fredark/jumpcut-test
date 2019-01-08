@@ -2,18 +2,33 @@
 @import "../../../../style/utils/_variables.scss";
 
 .map {
-  margin-bottom: rem(65px);
+  margin-bottom: rem(35px);
+
+  @media(min-width: $media-lg) {
+    margin-bottom: rem(65px);
+  }
+
 
   &__container {
-    padding-top: rem(60px);
+    padding-top: rem(30px);
+
+    @media(min-width: $media-lg) {
+      padding-top: rem(60px);
+    }
+
   }
 
   &__title {
     align-items: center;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: rem(60px);
+    margin-bottom: rem(40px);
+
+    @media(min-width: $media-lg) {
+      justify-content: space-between;
+      margin-bottom: rem(60px);
+    }
   }
 
   &__info {
@@ -23,13 +38,24 @@
   &__subtitle {
     color: $color01;
     display: block;
-    font-size: rem(26px);
+    font-size: rem(22px);
     font-weight: 700;
-    letter-spacing: rem(.8px);
-    margin-bottom: rem(20px);
+    margin-bottom: rem(10px);
+    text-align: center;
+
+    @media(min-width: $media-lg) {
+      font-size: rem(26px);
+      letter-spacing: rem(.8px);
+      margin-bottom: rem(20px);
+    }
   }
 
   &__map {
+    margin: 0 rem(-25px);
+
+    @media(min-width: $media-lg) {
+      margin: 0;
+    }
     iframe {
       height: rem(300px);
       width: 100%;
@@ -60,12 +86,24 @@
 .selected-list {
   align-items: center;
   display: flex;
+  justify-content: center;
+  margin-bottom: rem(20px);
+
+  @media(min-width: $media-lg) {
+    justify-content: flex-start;
+    margin-bottom: 0;
+  }
 
   &__item {
     color: #a1abb1;
-    font-size: rem(15px);
+    font-size: rem(12px);
     font-weight: 500;
-    letter-spacing: rem(.5px);
+    letter-spacing: rem(.2px);
+
+    @media(min-width: $media-lg) {
+      font-size: rem(15px);
+      letter-spacing: rem(.5px);
+    }
 
     &:first-child:before {
       display: none;
@@ -73,7 +111,12 @@
 
     &:before {
       content: '•';
-      margin: 0 rem(15px);
+      margin: 0 rem(5px);
+
+      @media(min-width: $media-lg) {
+        margin: 0 rem(15px);
+      }
+
     }
   }
 }

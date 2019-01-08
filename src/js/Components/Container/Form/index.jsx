@@ -54,7 +54,7 @@ class Form extends Component  {
     item.data.values = value.slice();
   }
 
-  nextFocus($input, pass = false) {
+  nextFocus($input) {
     let $form = $input.form,
         $nextInput,
         elementId;
@@ -67,7 +67,7 @@ class Form extends Component  {
 
     $nextInput = $form.elements[elementId + 1];
 
-    if($nextInput.value === "" || pass) {
+    if($nextInput.value === "") {
       $nextInput.focus();
     } else {
       $input.blur();
@@ -133,10 +133,6 @@ class Form extends Component  {
       this.changeValue(item.child.target, "");
       this.changeItem(item.child.target, item.child.values);
       $inputBox2.classList.remove('input-box--active');
-
-      this.nextFocus($input, true);
-    } else {
-      this.nextFocus($input);
     }
 
     $inputBox.classList.add('input-box--active');

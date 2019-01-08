@@ -3,13 +3,23 @@
 
 .footer {
   background-color: $color01;
-  margin-top: rem(85px);
+  margin-top: rem(50px);
   padding: 0;
+
+  @media(min-width: $media-lg) {
+    margin-top: rem(85px);
+  }
 
   &__container {
     align-items: center;
     display: flex;
-    height: rem(60px);
+    flex-wrap: wrap;
     justify-content: space-between;
+    padding: rem(20px) 0;
+
+    @media(min-width: $media-lg) {
+      height: rem(60px);
+      padding: 0;
+    }
   }
 }
