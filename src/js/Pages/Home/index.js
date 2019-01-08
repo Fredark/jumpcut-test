@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import '../../../style/style.scss';
-import Header from '../../Components/Header';
-import Search from '../../Components/Search';
-import Map from '../../Components/Map';
-import UsersList from '../../Components/UsersList';
-import Footer from '../../Components/Footer';
+import Header from '../../Components/Presentational/Header';
+import Search from '../../Components/Container/Search';
+import Map from '../../Components/Presentational/Map';
+import UsersList from '../../Components/Container/UsersList';
+import Footer from '../../Components/Presentational/Footer';
 import './Home.scss';
 
 

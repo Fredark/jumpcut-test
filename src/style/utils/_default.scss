@@ -5,8 +5,14 @@ body {
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
 
+* {
   box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
 }
 
 code {
@@ -17,4 +23,26 @@ code {
 svg {
   height: rem(32px);
   width: rem(32px);
+}
+
+.container {
+  margin: 0 auto;
+  max-width: rem(1152px);
+  width: calc(100% - 50px)
+}
+
+body {
+  &.menu--on {
+    overflow: hidden;
+  }
+}
+
+::-moz-selection {
+  background-color: rgba(0, 237, 201, .8);
+  color: $color01;
+}
+
+::selection {
+  background-color: rgba(0, 237, 201, .8);
+  color: $color01;
 }

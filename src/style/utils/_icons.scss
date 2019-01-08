@@ -11,6 +11,12 @@
     fill: white;
   }
 
+  &--notification,
+  &--chat {
+    height: rem(24px);
+    width: rem(24px);
+  }
+
   &--user {
     height: rem(20px);
     width: rem(20px);

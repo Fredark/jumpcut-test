@@ -1,0 +1,18 @@
+@import "~sass-rem";
+@import "../../../../style/utils/_variables.scss";
+
+.copyright {
+  color: #aaa;
+  display: inline-block;
+  font-size: rem(12px);
+  font-weight: 400;
+  flex: 1 1 auto;
+  letter-spacing: rem(.5);
+  text-align: center;
+  margin-bottom: rem(10px);
+
+  @media(min-width: $media-md) {
+    text-align: left;
+    margin-bottom: 0;
+  }
+}

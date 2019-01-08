@@ -1,0 +1,28 @@
+@import "~sass-rem";
+@import "../../../../style/utils/_variables.scss";
+
+.header {
+  background-color: $color01;
+
+  &__container {
+    align-items: center;
+    display: flex;
+    height: rem(55px);
+    justify-content: space-between;
+    transition: all 150ms ease-in-out;
+
+    @media(min-width: $media-xl) {
+      height: rem(70px);
+      justify-content: flex-start;
+    }
+  }
+
+  &__logo {
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+    height: rem(30px);
+    margin-right: rem(45px);
+    overflow: hidden;
+  }
+}

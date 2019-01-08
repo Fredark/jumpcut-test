@@ -1,0 +1,71 @@
+@import "~sass-rem";
+@import "../../../../style/utils/_variables.scss";
+
+.footer-menu {
+  flex: 1 1 rem(600px);
+
+  @media(min-width: $media-lg) {
+    flex: 0 0 auto;
+  }
+
+  &__list {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: rem(3px);
+
+    @media(min-width: $media-lg) {
+      justify-content: flex-end;
+    }
+  }
+
+  &__item {
+    flex: 0 0 auto;
+    margin: rem(2px) 0;
+
+    @media(min-width: $media-xl) {
+      margin: 0;
+    }
+
+    &:first-child:before {
+      display: none;
+    }
+
+    &:last-child {
+
+      @media(min-width: $media-lg) {
+        .footer-menu__link {
+          padding-right: 0;
+        }  
+      }
+
+    }
+
+    &:before {
+      content: '|';
+      color: #aaa;
+      display: none;
+      font-size: rem(12px);
+      font-weight: 400;
+
+      @media(min-width: $media-xl) {
+        display: inline-block;
+      }
+    }
+  }
+
+  &__link {
+    color: #aaa;
+    display: inline-block;
+    font-size: rem(12px);
+    font-weight: 400;
+    letter-spacing: rem(.5);
+    padding: rem(0) rem(10px);
+    transition: all 150ms ease-in-out;
+
+    &:hover {
+      color: $color02;
+    }
+  }
+}

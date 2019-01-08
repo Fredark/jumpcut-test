@@ -1,0 +1,16 @@
+@import "~sass-rem";
+@import "../../../../style/utils/_variables.scss";
+
+.top-list {
+  align-items: center;
+  display: flex;
+
+  &__item {
+    cursor: pointer;
+    margin-right: rem(25px);
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
