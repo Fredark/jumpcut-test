@@ -1,0 +1,15 @@
+@import "~sass-rem";
+@import "../../../../style/utils/_variables.scss";
+
+.footer {
+  background-color: $color01;
+  margin-top: rem(85px);
+  padding: 0;
+
+  &__container {
+    align-items: center;
+    display: flex;
+    height: rem(60px);
+    justify-content: space-between;
+  }
+}

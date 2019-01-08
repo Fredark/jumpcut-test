@@ -1,0 +1,26 @@
+@import "~sass-rem";
+@import "../../../../style/utils/_variables.scss";
+
+.login {
+  align-items: center;
+  display: flex;
+
+  &__icon {
+    align-items: center;
+    background-color: $color03;
+    border-radius: rem(18px);
+    display: flex;
+    height: rem(36px);
+    justify-content: center;
+    margin-right: rem(12px);
+    width: rem(36px);
+  }
+
+  &__name {
+    color: white;
+    font-size: rem(16);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: rem(1px);
+  }
+}

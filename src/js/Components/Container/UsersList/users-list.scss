@@ -1,0 +1,227 @@
+@import "~sass-rem";
+@import "../../../../style/utils/_variables.scss";
+
+.users {
+  &__amount {
+    color: #333;
+    display: block;
+    font-size: rem(18px);
+    font-weight: 500;
+    letter-spacing: rem(.2px);
+    margin-bottom: rem(20px);
+  }
+
+  &__number {
+    font-weight: 700;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.users-list {
+  align-items: stretch;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 rem(-8px) rem(30px);
+  justify-content: center;
+  counter-reset: item;
+
+  &__item {
+    background-color: white;
+    border: rem(1px) solid transparent;
+    border-radius: rem(5px);
+    box-shadow: 0 0 rem(10px) 0 rgba(0, 0, 0, .12);
+    flex: 1 1 rem(250px);
+    margin: rem(8px);
+    max-width: rem(276px);
+    counter-increment: item;
+    transition: all 150ms ease-in-out;
+
+    &:nth-child(even) {
+      .users-list__clip {
+        background-color: #3a54ff;
+      }
+    }
+
+    &:nth-child(odd) {
+      .users-list__clip {
+        background-color: #00ddb4;
+      }
+    }
+
+    &:nth-child(3n + 1) {
+      .users-list__clip {
+        background-color: #fccb44;
+      }
+    }
+
+    &[data-status = "1"] {
+      .users-list__avatar:before {
+        background-color: #00d800;
+      }
+    }
+
+    &[data-status = "2"] {
+      .users-list__avatar:before {
+        background-color: #ff9a05;
+      }
+    }
+
+    &:hover {
+      border-color: $color02;
+    }
+  }
+
+  &__article {
+    align-items: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    padding: rem(20px) rem(20px) rem(25px);
+    width: 100%;
+  }
+
+  &__avatar {
+    margin-bottom: rem(10px);
+    position: relative;
+
+    &:before {
+      background-color: #c1c1c1;
+      border: rem(2px) solid white;
+      border-radius: 50%;
+      content: '';
+      height: rem(15px);
+      position: absolute;
+      bottom: rem(7px);
+      right: rem(2px);
+      width: rem(15px);
+      z-index: 20;
+    }
+  }
+
+  &__clip {
+    align-items: center;
+    border-radius: rem(40px);
+    display: inline-flex;
+    height: rem(80px);
+    justify-content: center;
+    overflow: hidden;
+    width: rem(80px);
+  }
+
+  &__img {
+    height: rem(80px);
+    width: auto;
+    max-width: none;
+  }
+
+  &__tag {
+    color: white;
+    font-size: rem(30px);
+    font-weight: 900;
+    letter-spacing: rem(.5px);
+  }
+
+  &__name {
+    color: $color01;
+    display: block;
+    font-size: rem(16px);
+    font-weight: 700;
+    letter-spacing: rem(.5px);
+    margin-bottom: rem(8px);
+
+    &:before {
+      content: counter(item) ". ";
+    }
+  }
+
+  &__location {
+    align-items: center;
+    color: #777;
+    display: inline-flex;
+    font-size: rem(12px);
+    font-weight: 400;
+    letter-spacing: rem(.5px);
+    margin-bottom: rem(18px);
+
+    .icon {
+      color: #777;
+      height: rem(12px);
+      margin-right: rem(3px);
+      width: rem(12px);
+    }
+  }
+
+  &__city {
+    align-items: center;
+    display: inline-flex;
+  }
+
+  &__radius {
+    align-items: center;
+    display: inline-flex;
+
+    &:before {
+      content: '•';
+      margin: 0 rem(8px);
+    }
+  }
+
+  &__activities {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: rem(25px);
+  }
+
+  &__activity {
+    color: #777;
+    font-size: rem(14px);
+    font-weight: 500;
+    letter-spacing: rem(.5px);
+
+    &:first-child:before {
+      display: none;
+    }
+
+    &:before {
+      content: "|";
+      color: #ccc;
+      margin: 0 rem(10px);
+    }
+  }
+
+  &__button {
+    border: rem(1px) solid #8f9aa4;
+    border-radius: rem(3px);
+    color: #666;
+    font-size: rem(13px);
+    font-weight: 500;
+    letter-spacing: rem(.3px);
+    margin-right: rem(8px);
+    padding: rem(4px) rem(8px);
+    transition: all 150ms ease-in-out;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      background-color: $color02;
+      border-color: $color02;
+      color: white;
+    }
+  }
+
+  &__message {
+    &:hover {
+      background-color: #8f9aa4;
+      border-color: #8f9aa4;
+      color: white;
+    }
+  }
+}

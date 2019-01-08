@@ -1,0 +1,147 @@
+@import "~sass-rem";
+@import "../../../../style/utils/_variables.scss";
+
+.input-box {
+  position: relative;
+  margin: rem(5px) 0;
+  flex: 1 1 rem(250px);
+  width: 100%;
+
+  @media(min-width: $media-lg) {
+    margin: rem(5px) rem(3px);
+    width: auto;
+  }
+
+
+  &--on {
+    .input-box__input {
+      border-radius: rem(3px) rem(3px) 0 0;
+    }
+
+    .options-list {
+      margin-top: 0;
+      opacity: 1;
+      visibility: visible;
+      z-index: 20;
+    }
+
+    .icon {
+      fill: $color02;
+    }
+  }
+
+  &--active {
+    .input-box__clear {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &:hover {
+    .input-box__input {
+      border-color: $color02;
+    }
+  }
+
+  .icon {
+    position: absolute;
+    top: 50%;
+    left: rem(20px);
+    transform: translateY(-50%);
+
+    &--idea {
+      left: rem(15px);
+    }
+  }
+
+  &__input {
+    background-color: white;
+    border-radius: rem(3px);
+    border: rem(2px) solid transparent;
+    color: #21313e;
+    font-size: rem(14px);
+    font-weight: 400;
+    letter-spacing: rem(.5px);
+    line-height: rem(21px);
+    height: rem(49px);
+    outline: none;
+    padding: rem(12px) rem(45px) rem(12px) rem(45px);
+    transition: all 150ms ease-in-out;
+    width: 100%;
+
+
+    @media(min-width: $media-lg) {
+      height: rem(55px);
+      padding: rem(15px) rem(45px) rem(15px) rem(45px);
+      width: rem(240px);
+    }
+
+    &--area {
+      @media(min-width: $media-lg) {
+        width: rem(195px);
+      }
+    }
+
+    &:focus {
+      border-color: $color02;
+    }
+  }
+
+  &__clear {
+    cursor: pointer;
+    position: absolute;
+    right: rem(20px);
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 0;
+    transition: all 150ms ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+
+    .icon {
+      fill: $color01;
+      height: rem(10px);
+      width: rem(10px);
+      position: static;
+      transform: none;
+      transition: all 150ms ease-in-out;
+
+      &:hover {
+        fill: #C00;
+      }
+    }
+  }
+}
+
+.options-list {
+  background-color: white;
+  border-radius: 0 0 rem(3px) rem(3px);
+  box-shadow: 0 0 rem(5px) 0 rgba(0, 0, 0, .2);
+  position: absolute;
+  margin-top: rem(-10px);
+  top: 100%;
+  left: 0;
+  width: 100%;
+  transition: all 150ms ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  z-index: -1;
+
+  &__item {
+    cursor: pointer;
+    padding: rem(12px) rem(30px);
+    transition: all 150ms ease-in-out;
+
+
+    &:hover,
+    &--on {
+      background-color: $color02;
+      color: white;
+    }
+
+    &--off {
+      display: none;
+    }
+  }
+}
