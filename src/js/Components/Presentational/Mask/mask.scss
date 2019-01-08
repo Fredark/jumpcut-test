@@ -1,0 +1,44 @@
+@import "~sass-rem";
+@import "../../../../style/utils/_variables.scss";
+
+.mask {
+  align-items: center;
+  background-color: $color01;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 300;
+  transition: all 150ms ease-in-out;
+
+  body.page--loaded & {
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+  }
+
+  .icon {
+    fill: white;
+    height: rem(130px);
+    width: rem(130px);
+    animation: infinite mask ease-in-out 1.5s;
+  }
+}
+
+
+@keyframes mask {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

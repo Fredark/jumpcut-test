@@ -13,6 +13,8 @@
     justify-content: center;
     position: relative;
     z-index: 50;
+    animation: search ease-in 2s;
+    padding-top: rem(50px);
 
     @media(orientation: landscape) and (min-width: $media-xs) {
       height: calc(100vh - 55px);
@@ -26,7 +28,8 @@
 
     @media(min-width: $media-lg) {
       min-height: rem(350px);
-      height: calc(100vh - 230px);
+      padding-top: rem(70);
+      height: 100vh;
     }
   }
 
@@ -153,5 +156,19 @@
     &:hover {
       background-color: $color02hover;
     }
+  }
+}
+
+@keyframes search {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    top: rem(-30px);
+  }
+
+  to {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
   }
 }

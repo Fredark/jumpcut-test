@@ -2,7 +2,23 @@
 @import "../../../../style/utils/_variables.scss";
 
 .header {
-  background-color: $color01;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  animation: header ease-in 3s;
+  transition: all 150ms ease-in-out;
+
+  body.menu--on & {
+    background-color: $color01;
+  }
+
+  &--active {
+    background-color: $color01;
+    box-shadow: 0 0 rem(10px) 0 rgba(0, 0, 0, .7);
+  }
 
   &__container {
     align-items: center;
@@ -24,5 +40,17 @@
     height: rem(30px);
     margin-right: rem(45px);
     overflow: hidden;
+  }
+}
+
+@keyframes header {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  to {
+    opacity: 1;
+    visibility: visible;
   }
 }
