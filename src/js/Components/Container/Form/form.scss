@@ -9,10 +9,8 @@
 
   @media(orientation: landscape) and (min-width: $media-xs) {
     margin: rem(5px);
-    flex: 1 1 rem(300px);
+    flex: 1 1 rem(250px);
   }
-
-
 
   @media(min-width: $media-xl) {
     margin: rem(5px) rem(3px);
