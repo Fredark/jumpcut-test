@@ -2,9 +2,9 @@ This project is a Front End test by Jumpcut.
 
 It's separated in two partes. One was developed the same as the preview design and the second is equal as the first one, but with some improvements:
 
-[Part one](https://jumpcut-test-9bzoelt9w.now.sh/)
+[Part one](https://jumpcut-test-6g752167u.now.sh/)
 
-[Part two](https://jumpcut-test-2-cqg7qqma7.now.sh/)
+[Part two](https://jumpcut-test-2-1kmxwu0a1.now.sh/)
 
 
 ## Dependencies
@@ -18,7 +18,12 @@ Project Dependencies:
 
 PS: There's no jQuery in this project.
 
-Script to run:
+
+## Data
+
+All the project data are structured in JSON and can be founded on `src/Data`.
+
+## Script to run:
 
 ### `npm start`
 

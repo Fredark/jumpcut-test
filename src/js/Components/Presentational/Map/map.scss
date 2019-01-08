@@ -59,10 +59,13 @@
   &__info {
     flex: 0 0 auto;
     position: relative;
-    opacity: 0;
-    visibility: hidden;
-    left: rem(-150px);
     transition: all 1.2s ease-in-out;
+
+    @media(min-width: $media-xl) {
+      opacity: 0;
+      visibility: hidden;
+      left: rem(-150px);
+    }
   }
 
   &__subtitle {
@@ -87,10 +90,13 @@
   &__map {
     margin: 0 rem(-25px);
     position: relative;
-    opacity: 0;
-    visibility: hidden;
-    bottom: rem(-100px);
     transition: all 1.5s ease-in-out;
+
+    @media(min-width: $media-xl) {
+      opacity: 0;
+      visibility: hidden;
+      bottom: rem(-100px);
+    }
 
     @media(min-width: $media-xl) {
       margin: 0;
@@ -121,12 +127,15 @@
     letter-spacing: rem(.3px);
     outline: none;
     position: relative;
-    opacity: 0;
-    visibility: hidden;
-    right: rem(-150px);
     text-transform: uppercase;
     transition: all 1.2s ease-in-out, color 150ms ease-in-out;
     width: rem(190px);
+
+    @media(min-width: $media-xl) {
+      opacity: 0;
+      visibility: hidden;
+      right: rem(-150px);
+    }
 
     &:hover {
       color: $color02;

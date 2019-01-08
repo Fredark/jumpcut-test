@@ -70,6 +70,11 @@
     }
 
     @media(min-width: $media-lg) {
+      height: 100%;
+      width: auto;
+    }
+
+    @media(min-width: $media-xl) {
       height: auto;
       width: 100%;
     }
