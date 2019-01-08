@@ -7,6 +7,10 @@
   flex: 1 1 rem(250px);
   width: 100%;
 
+  @media(orientation: landscape) {
+    margin: rem(5px);
+  }
+
   @media(min-width: $media-lg) {
     margin: rem(5px) rem(3px);
     width: auto;
@@ -69,6 +73,10 @@
     transition: all 150ms ease-in-out;
     width: 100%;
 
+    @media(orientation: landscape) {
+      height: rem(43px);
+      padding: rem(9px) rem(45px) rem(9px) rem(45px);
+    }
 
     @media(min-width: $media-lg) {
       height: rem(55px);

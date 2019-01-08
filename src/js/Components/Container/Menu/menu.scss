@@ -42,6 +42,10 @@
     z-index: -1;
     width: 100%;
 
+    @media(orientation: landscape) {
+      padding-top: rem(30px);
+    }
+
     @media(min-width: $media-lg) {
       flex: 1 1 auto;
       flex-flow: row nowrap;
@@ -143,6 +147,12 @@
     padding: rem(5px) 0 rem(3px);
     text-transform: uppercase;
     transition: all 150ms ease-in-out;
+
+    @media(orientation: landscape) {
+      font-size: rem(14px);
+      margin-bottom: rem(5px);
+    }
+
 
     @media(min-width: $media-lg) {
       font-size: rem(14px);
