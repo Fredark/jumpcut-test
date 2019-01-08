@@ -21,7 +21,7 @@ PS: There's no jQuery in this project.
 
 ## Data
 
-All the project data are structured in JSON and can be founded on `src/Data`.
+All the project data are structured in JSON and can be founded on `src/js/Data`.
 
 ## Script to run:
 
