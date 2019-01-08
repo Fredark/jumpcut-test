@@ -1,17 +1,13 @@
 import React, { Component } from 'react';
 import Icons from '../Icons';
+import { user } from '../../../Data/user';
 import './login.scss';
 
 class Login extends Component {
   constructor() {
     super();
 
-    this.state = {
-      user: {
-        photo: "",
-        name: "SJ"
-      }
-    }
+    this.state = user;
   }
 
   render() {
