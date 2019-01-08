@@ -4,7 +4,7 @@ It's separated in two partes. One was developed the same as the preview design a
 
 [Part one](https://jumpcut-test-6g752167u.now.sh/)
 
-[Part two](https://jumpcut-test-2-ldl35c0tr.now.sh/)
+[Part two](https://jumpcut-test-2-1kmxwu0a1.now.sh/)
 
 
 ## Dependencies
