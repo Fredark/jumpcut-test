@@ -1,8 +1,9 @@
 This project is a Front End test by Jumpcut.
 
-Live:
-[Part one](https://jumpcut.slab.com/public/jumpcut-front-end-test-214b4167)
-[Part two](https://jumpcut.slab.com/public/jumpcut-front-end-test-214b4167)
+This project is separated in two partes. One was developed the same as the preview design and the second is equal as the first one, but with some improvements:
+[Part one](https://jumpcut-test-9bzoelt9w.now.sh/)
+
+[Part two](https://jumpcut-test-9bzoelt9w.now.sh/)
 
 
 ## Dependencies
