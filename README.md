@@ -2,9 +2,9 @@ This project is a Front End test by Jumpcut.
 
 It's separated in two partes. One was developed the same as the preview design and the second is equal as the first one, but with some improvements:
 
-[Part one](https://jumpcut-test-6g752167u.now.sh/)
+[Part one](https://jumpcut-test-p2twq99v2.now.sh/)
 
-[Part two](https://jumpcut-test-2-1kmxwu0a1.now.sh/)
+[Part two](https://jumpcut-test-2-gi8kya5gy.now.sh/)
 
 
 ## Dependencies
