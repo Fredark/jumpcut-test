@@ -54,6 +54,7 @@
     @media(min-width: $media-lg) {
       flex: 1 1 auto;
       flex-flow: row nowrap;
+      height: auto;
       padding: 0;
       position: static;
       visibility: visible;
